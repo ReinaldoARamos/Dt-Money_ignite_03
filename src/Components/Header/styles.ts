@@ -12,15 +12,25 @@ margin: 0 auto;
 padding: 0 1.5rem;
 display: flex;
 align-items: center;
-justify-content: space-between;
+justify-content: space-around;
 
 `;
 
 export const TransactionButton = styled.button`
-  width: 4rem;
-  height: 1rem;
+ 
+  height: 50px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 0;
+  color:${props => props.theme["white"]};
   background: ${props => props.theme["green-500"]};
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.4s;
+
+  &:hover{
+    background: ${props => props.theme["green-700"]};
+  }
 `;
