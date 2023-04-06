@@ -2,9 +2,10 @@ import { Header } from "../../Components/Header/Header";
 import { Summary } from "../../Components/Summary";
 
 export function Transactions() {
-    return(
+  return (
     <div>
       <Header />
-      <Summary/>
-    </div>)
+      <Summary />
+    </div>
+  );
 }
