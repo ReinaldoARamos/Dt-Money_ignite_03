@@ -3,8 +3,7 @@ import HeaderLogo from "../../assets/Logo.svg"
 export function Header() {
    
     return(
-        asd
-
+        
         <HeaderContainer>
 
         <HeaderContent>
