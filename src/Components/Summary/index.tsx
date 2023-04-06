@@ -24,7 +24,7 @@ export function Summary() {
         <strong>R$: 2.000</strong>
       </SummaryCard>
 
-      <SummaryCard>
+      <SummaryCard variant="green">
         <header>
           <span>Total</span>
           <CurrencyCircleDollar size={32} color="#fff" />
