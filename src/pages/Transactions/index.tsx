@@ -1,6 +1,10 @@
 import { Header } from "../../Components/Header/Header";
 import { Summary } from "../../Components/Summary";
-import { TransactionsContainer } from "./style";
+import {
+  PriceHightLight,
+  TransactionsContainer,
+  TransactionsTable,
+} from "./style";
 
 export function Transactions() {
   return (
@@ -8,25 +12,30 @@ export function Transactions() {
       <Header />
       <Summary />
 
-    <TransactionsContainer>
-    <table>
-        <tbody>
-          <tr>
-            <td width="50%">Desenvolvimento de site</td>
-            <td>R$: 12.000</td>
-            <td>Venda</td>
-            <td>11/10/2022</td>
-          </tr>
+      <TransactionsContainer>
+        <TransactionsTable>
+          <tbody>
+            <tr>
+              <td width="50%">Desenvolvimento de site</td>
+              <td>
+                
+                <PriceHightLight variant="income"> R$: 12.000</PriceHightLight>
+              </td>
+              <td>Venda</td>
+              <td>11/10/2022</td>
+            </tr>
 
-          <tr>
-            <td width="50%">Hambúrguer</td>
-            <td>- R$: 59.90</td>
-            <td>Venda</td>
-            <td>12/10/2022</td>
-          </tr>
-        </tbody>
-      </table>
-    </TransactionsContainer>
+            <tr>
+              <td width="50%">Hambúrguer</td>
+              <td>
+                <PriceHightLight variant="outcome">- R$: 59.00</PriceHightLight>
+              </td>
+              <td>Venda</td>
+              <td>12/10/2022</td>
+            </tr>
+          </tbody>
+        </TransactionsTable>
+      </TransactionsContainer>
     </div>
   );
 }
