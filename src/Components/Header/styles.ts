@@ -12,7 +12,7 @@ margin: 0 auto;
 padding: 0 1.5rem;
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: space-between;
 
 `;
 
