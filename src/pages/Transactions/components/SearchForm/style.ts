@@ -23,6 +23,7 @@ color:${props => props.theme["gray-300"]};
 gap: 12px;
 
 
+
 `
 
 export const SearchButton = styled.button`
@@ -32,5 +33,16 @@ border: 1px solid ${props => props.theme["green-300"]};
 background: none;
 color:${props => props.theme["green-300"]};
 border-radius: 6px;
+display: flex ;
+align-items: center;
+justify-content: center;
+gap: 0.375rem;
+transition: 0.2s;
+
+&:hover{
+    border: 1px solid ${props => props.theme["green-500"]};
+    color:${props => props.theme["green-500"]};
+    cursor: pointer;
+}
 
 `
