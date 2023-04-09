@@ -14,7 +14,7 @@ export function NewTransactionModal() {
             <input type="text" placeholder="catergoria"/>
 
             <button type="submit">
-                Catastar
+                Cadastrar
             </button>
         </form>
         <Dialog.Close />
