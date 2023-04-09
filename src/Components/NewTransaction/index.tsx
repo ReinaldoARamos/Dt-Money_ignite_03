@@ -1,14 +1,24 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import { Overlay } from "@radix-ui/react-dialog";
+import { Overlay, Content } from "./style";
+
 
 export function NewTransactionModal() {
   return (
     <Dialog.Portal>
      <Overlay/>
-      <Dialog.Content>
+      <Content>
         <Dialog.Title>Nova Transação</Dialog.Title>
+        <form action=""> 
+            <input type="text" placeholder="descrição"/>
+            <input type="number" placeholder="preço"/>
+            <input type="text" placeholder="catergoria"/>
+
+            <button type="submit">
+                Catastar
+            </button>
+        </form>
         <Dialog.Close />
-      </Dialog.Content>
+      </Content>
     </Dialog.Portal>
   );
 }
