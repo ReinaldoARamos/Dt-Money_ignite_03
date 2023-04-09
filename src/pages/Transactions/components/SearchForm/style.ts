@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SearchContainer = styled.section`
+export const SearchContainer = styled.form `
    width: 100%;
     max-width: 1120px;
     margin: 0 auto;
@@ -22,6 +22,10 @@ border: transparent;
 color:${props => props.theme["gray-300"]};
 gap: 12px;
 
+&::placeholder{
+    color:${props => props.theme["gray-500"]};
+    padding: 1rem
+}
 
 
 `

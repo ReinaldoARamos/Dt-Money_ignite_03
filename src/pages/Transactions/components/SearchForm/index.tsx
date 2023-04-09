@@ -3,7 +3,7 @@ import { MagnifyingGlass } from "phosphor-react";
 export function SearchForm() {
   return (
     <SearchContainer>
-      <SearchFormInput placeholder="Busque o seu dori" />
+      <SearchFormInput placeholder="Busque uma transação" />
 
       <SearchButton>
         <MagnifyingGlass size={22} color="#00B37E" />
