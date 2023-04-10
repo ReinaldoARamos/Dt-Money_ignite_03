@@ -10,11 +10,13 @@ import {
 
 export function Transactions() {
   useEffect(() => {
-    fetch("http://localhost:3000/transactions").then((response) => {
-      console.log(response);
-    });
+    fetch("http://localhost:3000/transactions").then((response) =>
+      response.json().then((data) => {
+        console.log(data);
+      })
+    );
   }, []);
-  
+
   return (
     <div>
       <Header />
