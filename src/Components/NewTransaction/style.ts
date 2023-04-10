@@ -37,10 +37,14 @@ export const Content = styled(Dialog.Content)`
       &::placeholder{
         color: ${(props) => props.theme["gray-500"]};
       }
-      
+
       
   }
-
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
   button[type="submit"]{
         height: 50px ;
         border-radius: 6px;
