@@ -8,15 +8,21 @@ import {
   TransactionsTable,
 } from "./style";
 
-export function Transactions() {
-  useEffect(() => {
-    fetch("http://localhost:3000/transactions").then((response) =>
-      response.json().then((data) => {
-        console.log(data);
-      })
-    );
-  }, []);
 
+
+export function Transactions() {
+
+  async function LoadTransaction() {
+    const response = await fetch("http://localhost:3000/transactions")
+    const data = response.json()
+
+    console.log(data)
+  }
+
+  useEffect(() => {
+    LoadTransaction();
+  }, []);
+ 
   return (
     <div>
       <Header />
