@@ -5,7 +5,8 @@
             "description": "Venda de Site",
             "price": 14000,
             "caterogy": "venda",
-            "type": "Income"
+            "type": "Income",
+            "date": "2023-04-10T19:54:57.546Z"
         },
 
         {
@@ -13,7 +14,8 @@
             "description": "Hamburguer",
             "price": 60,
             "caterogy": "Compra",
-            "type": "Outcome"
+            "type": "Outcome",
+            "date": "2023-04-10T19:54:57.546Z"
         } 
     ]
 }
