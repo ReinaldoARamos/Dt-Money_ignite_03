@@ -2,21 +2,24 @@ import { useForm } from "react-hook-form";
 import { SearchButton, SearchContainer, SearchFormInput } from "./style";
 import { MagnifyingGlass } from "phosphor-react";
 import * as z from 'zod'
+import {zodResolver} from '@hookform/resolvers/zod'
 
 const searchFormSchema = z.object({
   query: z.string(),
 })
 
-type SearchFormInputs = z.infer<typeof searchFormSchema>
+type SearchFormInputs = z.infer<typeof searchFormSchema>;
 
 export function SearchForm() {
   
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm<SearchFormInputs>({
+    resolver: zodResolver(searchFormSchema)
+  });
   
   
-  function handleSearchTransactions() {
-
+  function handleSearchTransactions(data : SearchFormInputs) {
+    console.log(data)
   }
   return (
     <SearchContainer onSubmit={handleSubmit(handleSearchTransactions)}>
