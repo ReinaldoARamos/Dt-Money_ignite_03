@@ -43,7 +43,11 @@ justify-content: center;
 gap: 0.375rem;
 transition: 0.2s;
 
-&:hover{
+:disabled{
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+&:not(:disabled):hover{
     border: 1px solid ${props => props.theme["green-500"]};
     color:${props => props.theme["green-500"]};
     cursor: pointer;
