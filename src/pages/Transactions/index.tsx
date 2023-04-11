@@ -8,14 +8,6 @@ import {
   TransactionsTable,
 } from "./style";
 
-interface TransactionsProps {
-  id: Number,
-description: String
-  price: number,
-  caterogy: String;
-  type: "income" | "outcome"
-  CreatedAt: String
-}
 
 export function Transactions() {
 
