@@ -19,7 +19,7 @@ export const Content = styled(Dialog.Content)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
   form {
     margin-top: 2rem;
 
@@ -34,97 +34,94 @@ export const Content = styled(Dialog.Content)`
       color: ${(props) => props.theme["gray-300"]};
       padding: 1rem;
 
-      &::placeholder{
+      &::placeholder {
         color: ${(props) => props.theme["gray-500"]};
       }
-
-      
-  }
-  input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none !important;
-  margin: 0 !important;
-}
-  button[type="submit"]{
-        height: 50px ;
-        border-radius: 6px;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none !important;
+      margin: 0 !important;
+    }
+    button[type="submit"] {
+      height: 50px;
+      border-radius: 6px;
       border: 0;
       background: ${(props) => props.theme["green-500"]};
       color: ${(props) => props.theme.white};
       padding: 1rem;
-      margin-top: 1.5rem ;
+      margin-top: 1.5rem;
       font-weight: bold;
-      transition: 0.2s ;
-        cursor: pointer ;
+      transition: 0.2s;
+      cursor: pointer;
 
-        
-:disabled{
-    opacity: 0.7;
-    cursor: not-allowed;
-}
+      :disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
 
-&:not(:disabled):hover{
+      &:not(:disabled):hover {
         background: ${(props) => props.theme["green-700"]};
       }
-      }
-
-    
     }
+  }
 `;
 
-
 export const CloseButton = styled(Dialog.Close)`
-position: absolute ;
-background: transparent ;
-border: 0 ;
-top: 1.5rem;
-right: 1.5rem;
+  position: absolute;
+  background: transparent;
+  border: 0;
+  top: 1.5rem;
+  right: 1.5rem;
 
-cursor: pointer ;
-line-height: 0;
-color: ${(props) => props.theme["gray-400"]};
-` 
+  cursor: pointer;
+  line-height: 0;
+  color: ${(props) => props.theme["gray-400"]};
+`;
 
 export const TransactionType = styled(RadioGroup.Root)`
-    display: grid ;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 0.5rem ;
-`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+`;
 
-
-interface TransactionButtonProps{
-    variant: "Income" | "Outcome"
-
+interface TransactionButtonProps {
+  variant: "Income" | "Outcome";
 }
-export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionButtonProps>`
-        background: ${(props) => props.theme["gray-700"]};
-        padding: 1rem ;
-        align-items: center;
-        display: flex ;
-        justify-content: center;
-        gap: 0.5rem;
-        border-radius: 6px;
-        cursor: pointer;
-        border: 0;
-        color: ${(props) => props.theme["gray-100"]};
+export const TransactionTypeButton = styled(
+  RadioGroup.Item
+)<TransactionButtonProps>`
+  background: ${(props) => props.theme["gray-700"]};
+  padding: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 0;
+  color: ${(props) => props.theme["gray-100"]};
 
-       svg{
-        color: ${props => props.variant === "Income" ? props.theme["green-500"] : props.theme["red-300"] };
-       }
+  svg {
+    color: ${(props) =>
+      props.variant === "Income"
+        ? props.theme["green-500"]
+        : props.theme["red-300"]};
+  }
 
-       &[data-state='checked']{
-        color: ${(props) => props.theme.white};
-        background: ${props => props.variant === "Income" ? props.theme["green-500"] : props.theme["red-300"] }; ;
+  &[data-state="checked"] {
+    color: ${(props) => props.theme.white};
+    background: ${(props) =>
+      props.variant === "Income"
+        ? props.theme["green-500"]
+        : props.theme["red-300"]};
 
-        svg{
-            color: ${(props) => props.theme.white};
-        }
-
-     
-       }
-       &[data-state='unchecked']:hover{
-            background: ${(props) => props.theme["gray-600"]};
-        }
-
-`
+    svg {
+      color: ${(props) => props.theme.white};
+    }
+  }
+  &[data-state="unchecked"]:hover {
+    background: ${(props) => props.theme["gray-600"]};
+  }
+`;
