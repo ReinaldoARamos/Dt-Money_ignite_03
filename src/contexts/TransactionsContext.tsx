@@ -6,7 +6,7 @@ interface Transactions {
     price: number,
     caterogy: String;
     type: "Income" | "Outcome"
-    CreatedAt: String
+    CreatedAt: Date
   }
   
 
