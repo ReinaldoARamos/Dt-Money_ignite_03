@@ -11,12 +11,13 @@ import { ArrowCircleDown, ArrowCircleUp, X } from "phosphor-react";
 import * as z from "zod";
 import { Controller, useForm,  } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { api } from "../../lib/axios";
 
 const newTransactionFormSchema = z.object({
   description: z.string(),
   price: z.number(),
   category: z.string(),
-  type: z.enum(["income", "outcome"]),
+ type: z.enum(["Income", "Outcome"]),
 });
 
 type newTransactionFormInputs = z.infer<typeof newTransactionFormSchema>;
@@ -30,12 +31,19 @@ export function NewTransactionModal() {
   } = useForm<newTransactionFormInputs>({
     resolver: zodResolver(newTransactionFormSchema),
     defaultValues: {
-      type: 'income'
+      type: 'Income'
     }
   });
 
   async function handleCreateNewTransaction(data: newTransactionFormInputs) {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    
+    const {category, description, price, type} = data
+    await api.post('/transactions', {
+      category,
+      description,
+      price ,
+      type
+    })
 
     console.log(data);
   }
@@ -64,11 +72,11 @@ export function NewTransactionModal() {
             {...register("category")}
           />
 
-        <Controller 
+<Controller 
         control={control}
         name="type"
         render={({field}) => {
-          console.log(field)
+       
           return(
             
           <TransactionType onValueChange={field.onChange} value={field.value}>

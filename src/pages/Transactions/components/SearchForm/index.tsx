@@ -5,6 +5,7 @@ import * as z from 'zod'
 import {zodResolver} from '@hookform/resolvers/zod'
 import { useContext } from "react";
 import { TransactionContext } from "../../../../contexts/TransactionsContext";
+import { api } from "../../../../lib/axios";
 
 const searchFormSchema = z.object({
   query: z.string(),
@@ -19,8 +20,8 @@ export function SearchForm() {
   const { register, handleSubmit, formState: {isSubmitting} } = useForm<SearchFormInputs>({
     resolver: zodResolver(searchFormSchema) 
   });
-  
-  
+
+
   async function handleSearchTransactions(data : SearchFormInputs) {
     await FetchTransactions(data.query)
   }

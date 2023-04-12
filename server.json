@@ -1,29 +1,41 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "description": "Venda de Site",
-            "price": 14000,
-            "caterogy": "venda",
-            "type": "Income",
-            "date": "2023-04-10T19:54:57.546Z"
-        },
-
-        {
-            "id": 2,
-            "description": "Hamburguer",
-            "price": 60,
-            "caterogy": "Compra",
-            "type": "Outcome",
-            "date": "2023-04-10T19:54:57.546Z"
-        } ,
-        {
-            "id": 3,
-            "description": "Neco Arc",
-            "price": 10000,
-            "caterogy": "Doridoridori",
-            "type": "Outcome",
-            "date": "2023-04-10T19:54:57.546Z"
-        } 
-    ]
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Venda de Site",
+      "price": 14000,
+      "caterogy": "venda",
+      "type": "Income",
+      "date": "2023-04-10T19:54:57.546Z"
+    },
+    {
+      "id": 2,
+      "description": "Hamburguer",
+      "price": 60,
+      "caterogy": "Compra",
+      "type": "Outcome",
+      "date": "2023-04-10T19:54:57.546Z"
+    },
+    {
+      "id": 3,
+      "description": "Neco Arc",
+      "price": 10000,
+      "caterogy": "Doridoridori",
+      "type": "Outcome",
+      "date": "2023-04-10T19:54:57.546Z"
+    },
+    {
+      "category": "Venda",
+      "description": "Testea",
+      "price": 1,
+      "id": 4
+    },
+    {
+      "category": "Venda",
+      "description": "Testea",
+      "price": 1,
+      "type": "Income",
+      "id": 5
+    }
+  ]
 }
