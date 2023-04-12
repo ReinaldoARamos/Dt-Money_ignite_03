@@ -22,8 +22,7 @@ export function SearchForm() {
   
   
   async function handleSearchTransactions(data : SearchFormInputs) {
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    console.log(data);
+    await FetchTransactions(data.query)
   }
   return (
     <SearchContainer onSubmit={handleSubmit(handleSearchTransactions)}>
