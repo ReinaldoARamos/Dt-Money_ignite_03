@@ -17,7 +17,7 @@ export function SearchForm() {
   const {FetchTransactions} = useContext(TransactionContext)
 
   const { register, handleSubmit, formState: {isSubmitting} } = useForm<SearchFormInputs>({
-    resolver: zodResolver(searchFormSchema)
+    resolver: zodResolver(searchFormSchema) 
   });
   
   
