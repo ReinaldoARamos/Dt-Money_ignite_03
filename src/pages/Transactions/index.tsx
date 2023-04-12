@@ -33,7 +33,7 @@ const {transactions} = useContext(TransactionContext)
                    {PriceFormatter.format(transaction.price)} </PriceHightLight>
                 
                 </td>
-                <td>{transaction.caterogy}</td>
+                <td>{transaction.category}</td>
                 <td>{DateFormatter.format(transaction.CreatedAt)}</td>
               </tr>
               )
