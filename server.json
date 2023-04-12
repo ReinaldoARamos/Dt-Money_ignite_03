@@ -16,6 +16,14 @@
             "caterogy": "Compra",
             "type": "Outcome",
             "date": "2023-04-10T19:54:57.546Z"
+        } ,
+        {
+            "id": 3,
+            "description": "Neco Arc",
+            "price": 10000,
+            "caterogy": "Doridoridori",
+            "type": "Outcome",
+            "date": "2023-04-10T19:54:57.546Z"
         } 
     ]
 }
