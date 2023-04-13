@@ -39,6 +39,14 @@
       "type": "Income",
       "createdAt": "2023-04-12T20:04:29.443Z",
       "id": 7
+    },
+    {
+      "category": "Venda",
+      "description": "Teste",
+      "price": 1,
+      "type": "Outcome",
+      "createdAt": "2023-04-13T13:05:54.322Z",
+      "id": 8
     }
   ]
 }
