@@ -47,6 +47,22 @@
       "type": "Outcome",
       "createdAt": "2023-04-13T13:05:54.322Z",
       "id": 8
+    },
+    {
+      "category": "Venda",
+      "description": "Teste",
+      "price": 123,
+      "type": "Income",
+      "createdAt": "2023-04-13T17:54:02.905Z",
+      "id": 9
+    },
+    {
+      "category": "",
+      "description": "Teste",
+      "price": 1,
+      "type": "Outcome",
+      "createdAt": "2023-04-13T18:25:58.163Z",
+      "id": 10
     }
   ]
 }

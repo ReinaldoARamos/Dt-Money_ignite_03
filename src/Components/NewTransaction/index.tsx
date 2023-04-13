@@ -43,7 +43,7 @@ export function NewTransactionModal() {
     return context.CreateTransaction
   })
 
-  async function handleCreateNewTransaction(data: newTransactionFormInputs) {
+const  handleCreateNewTransaction = async (data: newTransactionFormInputs) => {
     
     const {category, description, price, type} = data
     await CreateTransaction({
